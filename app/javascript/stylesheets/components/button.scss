@@ -16,18 +16,13 @@ button {
   display: inline-flex;
   justify-content: center;
 
-  padding: var(--text-xs) var(--text-sm);
+  padding: 1rem 2rem;
+  border: 2px solid var(--color-grey);
+  border-radius: 50px;
 
   transition: all 120ms;
   text-decoration: none;
   text-align: center;
-
-  border: 0;
-  border-width: var(--border-width);
-  border-radius: var(--radius);
-
-  font-size: var(--text-sm);
-  font-weight: 500;
 
   -webkit-appearance: none;
 }

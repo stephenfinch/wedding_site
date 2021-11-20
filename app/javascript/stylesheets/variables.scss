@@ -35,11 +35,13 @@ $color-neutral-900: hsl(213, 11%, 15%);
 
 $color-white: #ffffff;
 $color-black: #010204;
+$color-grey: #B1B1B1;
 
 :root {
 
   --color-white: #{$color-white};
   --color-black: #{$color-black};
+  --color-grey: #{$color-grey};
 
   // Primary Colors (normal usage)
   --color-primary-lighter: #{$color-primary-50};
@@ -245,7 +247,7 @@ $color-black: #010204;
   --shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
 
   // Font Families
-  --font-primary: 'Roboto', sans-serif;
+  --font-primary: 'Lora', 'Satisfy';
 
   // Text Ratios
   // This is using a 16px base font-size using the Minor Third ratio
