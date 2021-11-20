@@ -1,5 +1,5 @@
 .nav-list {
-  position: fixed;
+  position: absolute;
   right: 0;
   display: flex;
   justify-content: flex-end;
@@ -23,7 +23,7 @@
   font-size: 30px;
   color: var(--color-white);
 
-  &:hover {
+  &:hover, &:focus {
     color: var(--color-primary);
   }
 

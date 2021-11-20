@@ -19,6 +19,7 @@ button {
   padding: 1rem 2rem;
   border: 2px solid var(--color-grey);
   border-radius: 50px;
+  user-select: none;
 
   transition: all 120ms;
   text-decoration: none;

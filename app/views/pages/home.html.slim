@@ -1,7 +1,15 @@
-.hero 
-  .hero-text.hero-initials S + M
-  .hero-text.hero-title Stephen & Mary
+.hero.top-hero
+  .hero-initials
+    | S
+    span.plus +
+    | M
+  .hero-text.hero-title-top Stephen & Mary
   .hero-text.hero-date 05/20/2022
   .hero-button-container
     = link_to 'RSVP', '/', class: 'btn btn-rsvp'
     = link_to 'Registry', '/', class: 'btn btn-registry'
+
+.scripture-box [31] “Therefore a man shall leave his father and mother and hold fast to his wife, and the two shall become one flesh.” [32] This mystery is profound, and I am saying that it refers to Christ and the church.
+
+.hero.bottom-hero.center
+  .hero-text.hero-title-bottom We are so excited to celebrate with you!
