@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/RoleModel/rolemodel_rails.git
+  revision: 5c2d488c7f6a109ead9658e7fd6f07fbf2cf7183
+  specs:
+    rolemodel_rails (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -185,6 +191,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4, >= 6.1.4.1)
+  rolemodel_rails!
   sass-rails (>= 6)
   spring
   turbolinks (~> 5)
@@ -193,7 +200,7 @@ DEPENDENCIES
   webpacker (~> 5.0)
 
 RUBY VERSION
-   ruby 2.7.2p137
+   ruby 3.0.1p64
 
 BUNDLED WITH
    2.2.17
