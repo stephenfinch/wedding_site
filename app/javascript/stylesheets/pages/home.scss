@@ -10,7 +10,7 @@
   background-image: url('../../assets/images/hero-image.jpeg');
 }
 
-.bottom-hero {
+.location-hero {
   background-image: url('../../assets/images/secondary-image.png');
 }
 
@@ -44,11 +44,6 @@
   font-size: 8rem;
 }
 
-.hero-title-bottom {
-  color: var(--color-white);
-  font-size: 5rem;
-}
-
 .hero-date {
   top: 60%;
   font-size: 3rem;
@@ -69,10 +64,18 @@
 .btn-rsvp {
   color: var(--color-black);
   background-color: var(--color-white);
+}
 
+.btn-registry {
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+.btn-rsvp, .btn-registry {
   &:hover, &:focus {
     color: var(--color-primary);
     border: 2px solid var(--color-primary);
+    box-shadow: 0px 0px 10px 2px var(--color-primary);
   }
 
   &:visited {
@@ -80,25 +83,78 @@
   }
 }
 
-.btn-registry {
-  color: var(--color-white);
-  background-color: var(--color-black);
-
-  &:hover, &:focus {
-    color: var(--color-primary);
-    border: 2px solid var(--color-primary);
-  }
-
-  &:visited {
-    color: var(--color-black);
-  }
-}
-
 .scripture-box {
   background-color: var(--color-primary);
   margin: 2rem 0;
-  padding: 2rem 20rem;
+  padding: 2rem 12rem;
   font-size: 1.5rem;
   text-align: center;
   box-shadow: 0px 5px 15px var(--color-grey);
+
+  h3 {
+    margin: 1rem 0 0 0;
+    font-size: 1.75rem;
+  }
+}
+
+// location styles
+.location-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20rem;
+  align-items: center;
+  height: 100vh;
+}
+
+.location-card-outter {
+  width: 380px;
+  height: 480px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location-card-inner {
+  width: 320px;
+  height: 410px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid #7ECDDF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    box-shadow: 0px 0px 10px 2px var(--color-primary);
+  }
+}
+
+.location-card-title {
+  color: var(--color-white);
+  font-size: 3rem;
+  text-align: center;
+  padding: 2rem 0;
+  width: 60%;
+  border-bottom: 1px solid var(--color-white);
+} 
+
+.location-card-date-time {
+  color: var(--color-primary);
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.4rem;
+}
+
+.location-card-address {
+  margin-bottom: 1.2rem;
+
+  p {
+    margin: 0.5rem 0;
+    color: var(--color-white);
+    text-align: center;
+    font-size: 1.6rem;
+  }
 }
