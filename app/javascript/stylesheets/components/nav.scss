@@ -23,11 +23,11 @@
   font-size: 30px;
   color: var(--color-white);
 
-  &:hover, &:focus {
-    color: var(--color-primary);
-  }
-
   &:visited {
     color: var(--color-white);
+  }
+
+  &:hover, &:focus {
+    color: var(--color-primary);
   }
 }

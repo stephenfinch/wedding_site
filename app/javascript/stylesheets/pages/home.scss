@@ -41,7 +41,14 @@
 
 .hero-title-top {
   top: 25%;
-  font-size: 8rem;
+  font-size: clamp(3rem, 10vw, 8rem);
+}
+
+@media screen and (max-width: 600px) {
+  .hero-title-top {
+    // font-size: 3rem;
+    top: 35%;
+  }
 }
 
 .hero-date {

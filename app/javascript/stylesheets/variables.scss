@@ -155,88 +155,88 @@ $color-grey: #B1B1B1;
   --color-notice-darker: #{$color-green-700};
   --color-notice-text: #{$color-green-700};
 
-  @media (prefers-color-scheme: dark) {
-    & {
-      --color-white: #{$color-black};
-      --color-black: #{$color-white};
+  // @media (prefers-color-scheme: dark) {
+//     & {
+//       --color-white: #{$color-black};
+//       --color-black: #{$color-white};
 
-      --color-primary-lighter: #{$color-neutral-700};
-      --color-primary-light: #{$color-primary-500};
-      --color-primary: #{$color-primary-400};
-      --color-primary-dark: #{$color-primary-300};
-      --color-primary-darker: #{$color-neutral-100};
+//       --color-primary-lighter: #{$color-neutral-700};
+//       --color-primary-light: #{$color-primary-500};
+//       --color-primary: #{$color-primary-400};
+//       --color-primary-dark: #{$color-primary-300};
+//       --color-primary-darker: #{$color-neutral-100};
 
-      --color-secondary-lighter: #{$color-neutral-700};
-      --color-secondary-light: #{$color-secondary-500};
-      --color-secondary: #{$color-secondary-400};
-      --color-secondary-dark: #{$color-secondary-300};
-      --color-secondary-darker: #{$color-neutral-100};
+//       --color-secondary-lighter: #{$color-neutral-700};
+//       --color-secondary-light: #{$color-secondary-500};
+//       --color-secondary: #{$color-secondary-400};
+//       --color-secondary-dark: #{$color-secondary-300};
+//       --color-secondary-darker: #{$color-neutral-100};
 
-      // Neutrals
-      --neutral-layer-app-background: #{$color-neutral-900};
-      --neutral-layer-app-text: #{$color-neutral-100};
+//       // Neutrals
+//       --neutral-layer-app-background: #{$color-neutral-900};
+//       --neutral-layer-app-text: #{$color-neutral-100};
 
-      --neutral-layer-1-background: #{$color-neutral-800};
-      --neutral-layer-1-text: #{$color-neutral-300};
-      --neutral-layer-1-border: #{$color-neutral-500};
+//       --neutral-layer-1-background: #{$color-neutral-800};
+//       --neutral-layer-1-text: #{$color-neutral-300};
+//       --neutral-layer-1-border: #{$color-neutral-500};
 
-      --neutral-layer-2-background: #{$color-neutral-700};
-      --neutral-layer-2-text: #{$color-neutral-200};
-      --neutral-layer-2-border: #{$color-neutral-400};
+//       --neutral-layer-2-background: #{$color-neutral-700};
+//       --neutral-layer-2-text: #{$color-neutral-200};
+//       --neutral-layer-2-border: #{$color-neutral-400};
 
-      --neutral-layer-3-background: #{$color-neutral-600};
-      --neutral-layer-3-text: #{$color-neutral-100};
-      --neutral-layer-3-border: #{$color-neutral-300};
+//       --neutral-layer-3-background: #{$color-neutral-600};
+//       --neutral-layer-3-text: #{$color-neutral-100};
+//       --neutral-layer-3-border: #{$color-neutral-300};
 
-      --neutral-layer-4-background: #{$color-neutral-500};
-      --neutral-layer-4-text: #{$color-neutral-800};
-      --neutral-layer-4-border: #{$color-neutral-100};
+//       --neutral-layer-4-background: #{$color-neutral-500};
+//       --neutral-layer-4-text: #{$color-neutral-800};
+//       --neutral-layer-4-border: #{$color-neutral-100};
 
-      --neutral-layer-card: #{$color-neutral-800};
-      --neutral-layer-card-container: #{$color-neutral-700};
-      --neutral-layer-floating: #{$color-neutral-800};
+//       --neutral-layer-card: #{$color-neutral-800};
+//       --neutral-layer-card-container: #{$color-neutral-700};
+//       --neutral-layer-floating: #{$color-neutral-800};
 
 
-      --color-neutral-50: #{$color-neutral-900};
-      --color-neutral-100: #{$color-neutral-800};
-      --color-neutral-200: #{$color-neutral-700};
-      --color-neutral-300: #{$color-neutral-600};
-      --color-neutral-400: #{$color-neutral-500};
-      --color-neutral-500: #{$color-neutral-400};
-      --color-neutral-600: #{$color-neutral-300};
-      --color-neutral-700: #{$color-neutral-200};
-      --color-neutral-800: #{$color-neutral-100};
-      --color-neutral-900: #{$color-neutral-50};
+//       --color-neutral-50: #{$color-neutral-900};
+//       --color-neutral-100: #{$color-neutral-800};
+//       --color-neutral-200: #{$color-neutral-700};
+//       --color-neutral-300: #{$color-neutral-600};
+//       --color-neutral-400: #{$color-neutral-500};
+//       --color-neutral-500: #{$color-neutral-400};
+//       --color-neutral-600: #{$color-neutral-300};
+//       --color-neutral-700: #{$color-neutral-200};
+//       --color-neutral-800: #{$color-neutral-100};
+//       --color-neutral-900: #{$color-neutral-50};
 
-      --color-warning-lighter: #{$color-yellow-600};
-      --color-warning-light: #{$color-yellow-500};
-      --color-warning: #{$color-yellow-400};
-      --color-warning-dark: #{$color-yellow-300};
-      --color-warning-darker: #{$color-yellow-100};
-      --color-warning-text: #{$color-neutral-800};
+//       --color-warning-lighter: #{$color-yellow-600};
+//       --color-warning-light: #{$color-yellow-500};
+//       --color-warning: #{$color-yellow-400};
+//       --color-warning-dark: #{$color-yellow-300};
+//       --color-warning-darker: #{$color-yellow-100};
+//       --color-warning-text: #{$color-neutral-800};
 
-      --color-danger-lighter: #{$color-red-600};
-      --color-danger-light: #{$color-red-500};
-      --color-danger: #{$color-red-400};
-      --color-danger-dark: #{$color-red-300};
-      --color-danger-darker: #{$color-red-100};
-      --color-danger-text: #{$color-neutral-800};
+//       --color-danger-lighter: #{$color-red-600};
+//       --color-danger-light: #{$color-red-500};
+//       --color-danger: #{$color-red-400};
+//       --color-danger-dark: #{$color-red-300};
+//       --color-danger-darker: #{$color-red-100};
+//       --color-danger-text: #{$color-neutral-800};
 
-      --color-info-lighter: #{$color-blue-600};
-      --color-info-light: #{$color-blue-500};
-      --color-info: #{$color-blue-400};
-      --color-info-dark: #{$color-blue-300};
-      --color-info-darker: #{$color-blue-100};
-      --color-info-text: #{$color-neutral-800};
+//       --color-info-lighter: #{$color-blue-600};
+//       --color-info-light: #{$color-blue-500};
+//       --color-info: #{$color-blue-400};
+//       --color-info-dark: #{$color-blue-300};
+//       --color-info-darker: #{$color-blue-100};
+//       --color-info-text: #{$color-neutral-800};
 
-      --color-notice-lighter: #{$color-green-600};
-      --color-notice-light: #{$color-green-500};
-      --color-notice: #{$color-green-400};
-      --color-notice-dark: #{$color-green-300};
-      --color-notice-darker: #{$color-green-100};
-      --color-notice-text: #{$color-neutral-800};
-    }
-  }
+//       --color-notice-lighter: #{$color-green-600};
+//       --color-notice-light: #{$color-green-500};
+//       --color-notice: #{$color-green-400};
+//       --color-notice-dark: #{$color-green-300};
+//       --color-notice-darker: #{$color-green-100};
+//       --color-notice-text: #{$color-neutral-800};
+//     }
+//   }
 
 
   // Border
