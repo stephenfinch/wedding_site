@@ -39,21 +39,14 @@
   }
 }
 
-.hero-title-top {
+.hero-title {
   top: 25%;
   font-size: clamp(3rem, 10vw, 8rem);
 }
 
-@media screen and (max-width: 600px) {
-  .hero-title-top {
-    // font-size: 3rem;
-    top: 35%;
-  }
-}
-
 .hero-date {
   top: 60%;
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 10vw, 3rem);
   letter-spacing: 4px;
 }
 
@@ -94,6 +87,21 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .hero-title {
+    top: 35%;
+  }
+
+  .hero-initials {
+    display: none;
+  }
+
+  .hero-button-container {
+    gap: 1.5rem;
+    font-size: 1.2rem;
+  }
+}
+
 .scripture-box {
   background-color: var(--color-primary);
   margin: 2rem 0;
@@ -104,7 +112,19 @@
 
   h3 {
     margin: 1rem 0 0 0;
-    font-size: 1.75rem;
+    font-size: clamp(1rem, 10vw, 1.75rem);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .scripture-box {
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+
+    h3 {
+      margin: 1rem 0 0 0;
+      font-size: 1.25rem;
+    }
   }
 }
 
@@ -112,8 +132,8 @@
 .location-cards-container {
   display: flex;
   justify-content: center;
-  gap: 20rem;
   align-items: center;
+  gap: 20rem;
   height: 100vh;
 }
 
@@ -154,6 +174,8 @@
 } 
 
 .location-card-date-time {
+  display: flex;
+  flex-direction: column;
   color: var(--color-primary);
   text-align: center;
   line-height: 2rem;
@@ -164,11 +186,57 @@
 .location-card-address {
   margin-bottom: 1.2rem;
 
-  p {
+  div {
     margin: 0.5rem 0;
     color: var(--color-white);
     text-align: center;
     font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .location-cards-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+  }
+
+  .location-card-outter {
+    width: 300px;
+    height: 240px;
+  }
+  
+  .location-card-inner {
+    width: 260px;
+    height: 190px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #7ECDDF;
+  
+    &:hover, &:focus {
+      box-shadow: 0px 0px 10px 2px var(--color-primary);
+    }
+  }
+
+  .location-card-title {
+    font-size: 1.5rem;
+    width: 50%;
+    padding: 0.3rem 0;
+  }
+
+  .location-card-date-time {
+  flex-direction: row;
+  gap: 1.1rem;
+  font-size: 1rem;
+  }
+
+  .location-card-address {
+    margin-bottom: 1rem;
+  
+    div {
+      margin: 0.2rem 0;
+      font-size: 1.25rem;
+    }
   }
 }
 
