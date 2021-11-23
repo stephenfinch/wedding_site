@@ -112,10 +112,11 @@
   padding: 2rem 12rem;
   font-size: 1.5rem;
   text-align: center;
-
+  
   h3 {
     margin: 1rem 0 0 0;
     font-size: clamp(1rem, 10vw, 1.75rem);
+    font-family: cursive;
   }
 }
 
@@ -169,6 +170,7 @@
 .location-card-title {
   color: var(--color-white);
   font-size: 3rem;
+  font-family: cursive;
   text-align: center;
   padding: 2rem 0;
   width: 60%;
@@ -254,6 +256,7 @@
 .registries-title {
   color: var(--color-black);
   font-size: 3rem;
+  font-family: cursive;
 }
 
 .registry-outter {
