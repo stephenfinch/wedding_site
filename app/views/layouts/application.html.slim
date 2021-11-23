@@ -1,12 +1,13 @@
 doctype html
 html
   head
-    title App Name
+    title Mary Said Yes
     meta name="viewport" content="width=device-width,initial-scale=1"
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_pack_tag 'stylesheets', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    = favicon_link_tag asset_path('blue-heart.png')
   body
     = render 'layouts/header'
     = render 'shared/flash'
