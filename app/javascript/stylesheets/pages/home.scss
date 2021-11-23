@@ -41,12 +41,12 @@
 
 .hero-title {
   top: 25%;
-  font-size: clamp(3rem, 10vw, 8rem);
+  font-size: clamp(3.25rem, 10vw, 8rem);
 }
 
 .hero-date {
   top: 60%;
-  font-size: clamp(1.5rem, 10vw, 3rem);
+  font-size: clamp(1.25rem, 8vw, 3rem);
   letter-spacing: 4px;
 }
 
@@ -102,13 +102,16 @@
   }
 }
 
-.scripture-box {
+.banner {
   background-color: var(--color-primary);
   margin: 2rem 0;
+  box-shadow: 0px 5px 15px var(--color-grey);
+}
+
+.scripture-box {
   padding: 2rem 12rem;
   font-size: 1.5rem;
   text-align: center;
-  box-shadow: 0px 5px 15px var(--color-grey);
 
   h3 {
     margin: 1rem 0 0 0;
@@ -118,7 +121,7 @@
 
 @media screen and (max-width: 600px) {
   .scripture-box {
-    padding: 0.5rem 2rem;
+    padding: 1rem 2rem;
     font-size: 1rem;
 
     h3 {
@@ -236,6 +239,87 @@
     div {
       margin: 0.2rem 0;
       font-size: 1.25rem;
+    }
+  }
+}
+
+// registries
+.registries {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3rem;
+}
+
+.registries-title {
+  color: var(--color-black);
+  font-size: 3rem;
+}
+
+.registry-outter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 180px;
+}
+
+.registry-outter-target {
+  background: #F6F6F6;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.25);
+}
+
+.registry-outter-amazon {
+  background: #8D8D8D;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.25);
+}
+
+.registry-image {
+  width: 280px;
+  height: 140px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.25);
+
+  transition: width 0.1s, height 0.1s;
+
+  &:hover, &:focus {
+    width: 285px;
+    height: 145px;
+  }
+}
+
+.registry-target {
+  background-image: url('../../assets/images/target_link.png');
+}
+
+.registry-amazon {
+  background-image: url('../../assets/images/amazon_link.png');
+}
+
+@media screen and (max-width: 600px) {
+  .registries {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-evenly;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .registry-outter {
+    width: 300px;
+    height: 160px;
+  }
+
+  .registry-image {
+    width: 260px;
+    height: 120px;
+  
+    &:hover, &:focus {
+      width: 265px;
+      height: 125px;
     }
   }
 }
