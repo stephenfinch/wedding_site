@@ -1,0 +1,113 @@
+// location styles
+.location-cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20rem;
+  height: 100vh;
+}
+
+.location-card-outter {
+  width: 380px;
+  height: 480px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.location-card-inner {
+  width: 320px;
+  height: 410px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid #7ECDDF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    box-shadow: 0px 0px 10px 2px var(--color-primary);
+  }
+}
+
+.location-card-title {
+  color: var(--color-white);
+  font-size: 3rem;
+  font-family: 'Satisfy';
+  text-align: center;
+  padding: 2rem 0;
+  width: 60%;
+  border-bottom: 1px solid var(--color-white);
+  user-select: none;
+} 
+
+.location-card-date-time {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-primary);
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.4rem;
+  user-select: none;
+}
+
+.location-card-address {
+  margin-bottom: 1.2rem;
+
+  div {
+    margin: 0.5rem 0;
+    color: var(--color-white);
+    text-align: center;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .location-cards-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+  }
+
+  .location-card-outter {
+    width: 300px;
+    height: 240px;
+  }
+  
+  .location-card-inner {
+    width: 260px;
+    height: 190px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #7ECDDF;
+  
+    &:hover, &:focus {
+      box-shadow: 0px 0px 10px 2px var(--color-primary);
+    }
+  }
+
+  .location-card-title {
+    font-size: 1.5rem;
+    width: 50%;
+    padding: 0.5rem 0;
+    padding-top: 1rem;
+  }
+
+  .location-card-date-time {
+  flex-direction: row;
+  gap: 1.1rem;
+  font-size: 1rem;
+  }
+
+  .location-card-address {
+    margin-bottom: 1rem;
+  
+    div {
+      margin: 0.2rem 0;
+      font-size: 1.25rem;
+    }
+  }
+}

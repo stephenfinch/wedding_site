@@ -1,0 +1,30 @@
+// scripture box
+.banner {
+  background-color: var(--color-primary);
+  margin: 2rem 0;
+  box-shadow: 0px 5px 15px var(--color-grey);
+}
+
+.scripture-box {
+  padding: 2rem 12rem;
+  font-size: 1.5rem;
+  text-align: center;
+  
+  h3 {
+    margin: 1rem 0 0 0;
+    font-size: clamp(1rem, 10vw, 1.75rem);
+    font-family: 'Satisfy';
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .scripture-box {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+
+    h3 {
+      margin: 1rem 0 0 0;
+      font-size: 1.25rem;
+    }
+  }
+}
