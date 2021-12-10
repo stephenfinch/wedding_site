@@ -2,6 +2,8 @@
   background-color: var(--color-black);
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
 }
@@ -9,6 +11,7 @@
 .silly-img-container {
   height: 400px;
   overflow: hidden;
+  box-shadow: 0px 0px 10px 5px var(--color-primary);
 }
 
 .silly-img {

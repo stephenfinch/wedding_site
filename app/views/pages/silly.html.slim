@@ -1,3 +1,5 @@
 .silly-container
+  = link_to 'Return Home', '/'
   .silly-img-container
     = image_tag("/assets/silly/silly-photo-#{@index}.png", :alt => "silly photo", class: 'silly-img')
+  button.btn.btn--primary onClick="window.location.reload();" New Silly Picture
