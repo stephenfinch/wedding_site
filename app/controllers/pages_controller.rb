@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   def home
   end
 
-  def gallery
+  def silly
+    @index = rand(15)
   end
 end

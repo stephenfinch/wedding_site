@@ -1,0 +1,17 @@
+.silly-container {
+  background-color: var(--color-black);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.silly-img-container {
+  height: 400px;
+  overflow: hidden;
+}
+
+.silly-img {
+  width: 300px;
+  height: auto;
+}
