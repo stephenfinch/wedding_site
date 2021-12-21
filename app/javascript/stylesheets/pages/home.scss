@@ -10,13 +10,9 @@
   background-image: url('../../assets/images/hero-image.jpeg');
 }
 
-.location-hero {
-  background-image: url('../../assets/images/secondary-image.png');
-}
-
 .hero-text {
   user-select: none;
-  position: absolute;
+  position: relative;
   color: var(--color-white);
   font-family: 'Satisfy';
   width: 100%;
@@ -40,12 +36,12 @@
 }
 
 .hero-title {
-  top: 25%;
+  top: 20%;
   font-size: clamp(3.25rem, 10vw, 8rem);
 }
 
 .hero-date {
-  top: 60%;
+  top: 30%;
   font-size: clamp(1.25rem, 8vw, 3rem);
   letter-spacing: 4px;
 }
@@ -56,8 +52,8 @@
   gap: 3rem;
   width: 100%;
   margin: 0 auto;
-  position: absolute;
-  top: 80%;
+  position: relative;
+  top: 40%;
   font-size: 2rem;
 }
 
@@ -80,6 +76,10 @@
     top: 35%;
   }
 
+  .hero-date {
+    top: 50%;
+  }
+
   .hero-initials {
     display: none;
   }
@@ -87,6 +87,7 @@
   .hero-button-container {
     gap: 1.5rem;
     font-size: 1.5rem;
+    top: 65%;
   }
 }
 
