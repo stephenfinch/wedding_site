@@ -5,4 +5,7 @@ class PagesController < ApplicationController
   def silly
     @index = rand(15)
   end
+
+  def water
+  end
 end
