@@ -47,7 +47,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'webpacker', '~> 5.1'
 gem 'react-rails'
-gem 'webpacker', '~> 5.1'
-gem 'react-rails'
 gem 'slim'
 gem 'simple_form'
