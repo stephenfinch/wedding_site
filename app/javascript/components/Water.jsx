@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import wave0 from './../assets/images/wave0.png'
 import wave1 from './../assets/images/wave1.png'
@@ -10,10 +10,13 @@ import jugImgPath from './../assets/images/jug.png'
 
 const Water = () => {
   const [selected, setSelected] = useState('stephen')
-  const [slider, setSlider] = useState(20)
+  const [slider, setSlider] = useState(24)
+  const [ozDrank, setOzDrank] = useState(0)
   const [percent, setPercent] = useState(0)
+  const [imagePath, setImagePath] = useState(cupImgPath)
 
-  const waterLevelTop = 333
+  const GOAL = 120
+  const MAX_SLIDER_VALUE = 64
 
   const WaterNav = () => {
     return (
@@ -36,7 +39,7 @@ const Water = () => {
   const WaterProgress = () => {
     return (
       <div className='water-progress-container'>
-        <div className='water-progress'>{percent} oz</div>
+        <div className='water-progress'>{percent}%</div>
         {Waves()}
       </div>
     )
@@ -45,34 +48,52 @@ const Water = () => {
   const Waves = () => {
     return (
       <div>
-        <img src={wave2} className='waves wave2' style={{
-            top: `${130 - (waterLevelTop * percent) / 100}px`,
-            left: `${percent > 50 ? -(300 * (100 - percent)) / 100 : -(300 * percent) / 100}px`
+        <img src={wave2} className='waves' style={{
+          bottom: `${(450 * percent / 100) - 450}px`,
+          left: `${-1 * 2000 * percent / 100}px`,
           }}></img>
-        <img src={wave1} className={`waves wave1`} style={{
-          top: `${150 - (waterLevelTop * percent) / 100}px`,
-          left: `${(percent > 50 ? (300 * (100 - percent)) / 100 : (300 * percent) / 100) * 1.1 - 200}px`
+        <img src={wave1} className='waves' style={{
+          bottom: `${(450 * percent / 100) - 475}px`,
+          right: `-${2000 * percent / 100}px`,
         }}></img>
-        <img src={wave0} className={`waves wave0`} style={{
-          top: `${190 - (waterLevelTop * percent) / 100}px`,
-          left: `${(percent > 50 ? -(300 * (100 - percent)) / 100 : -(300 * percent) / 100) * 1.2}px`
+        <img src={wave0} className='waves' style={{
+          bottom: `${(450 * percent / 100) - 500}px`,
+          left: `${-0.8 * 2000 * percent / 100}px`,
         }}></img>
       </div>
     )
+  }
+
+  useEffect(() => {
+    selectImage()
+  }, [slider]);
+
+  useEffect(() => {
+    (ozDrank / GOAL * 100) < 100 ? setPercent(Math.round(ozDrank / GOAL * 100)) : setPercent(100) // TODO: change this 0 to 100 for final build
+  }, [ozDrank]);
+
+  function selectImage() {
+    if (slider > 2 * MAX_SLIDER_VALUE / 3) {
+      setImagePath(jugImgPath)
+    } else if (slider > MAX_SLIDER_VALUE / 3) {
+      setImagePath(bottleImgPath)
+    } else {
+      setImagePath(cupImgPath)
+    }
   }
 
   const WaterControl = () => {
     return (
       <div className='water-control-container'>
         <div className='water-control--item'>
-          <label htmlFor='water-control--slider'>
-            {/* <div>{percent} oz</div>
-            <img src={cupImgPath} alt="cup image" /> */}
-          </label>
-          <input onChange={({ target: { value } }) => setSlider(value)} id='water-control--slider' type="range" min="10" max="30" step='5' value={slider} className='water-control--slider' />
+          <input onChange={({ target: { value } }) => setSlider(parseInt(value))} id='water-control--slider' type="range" min="6" max="64" step='2' value={slider} className='water-control--slider' />
+          <div className='water-control--display'>
+            <img src={imagePath} alt={imagePath} />
+            <span>{slider} oz</span>
+          </div>
         </div>
         <div className='water-control--item'>
-          <button onClick={() => setPercent(percent + 10)} className='water-control--button'>Drink</button>
+          <button onClick={() => setOzDrank(ozDrank + slider)} className='water-control--button'>Drink</button>
         </div>
       </div>
     )

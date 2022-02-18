@@ -72,14 +72,22 @@
   flex: 1.5;
   width: calc(100% - 2rem);
   overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .water-progress {
   color: black;
   font-size: 5rem;
   font-weight: 900;
-  text-align: center;
-  margin-top: 40%;
+  z-index: 2;
+}
+
+.waves {
+  position: absolute;
+  transition: all ease-in-out 500ms;
 }
 
 .water-control-container {
@@ -95,15 +103,38 @@
 .water-control--item {
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
 }
 
 .water-control--slider {
-  // min-height: 3rem;
-  // width: min(calc(100% - 2rem), 500px);
-  color: black;
+  // do I need this?
+}
+
+.water-control--display {
+  background: white;
+  border: 4px solid #008EDE;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 50px;
+    height: 20px;
+    background: #008EDE;
+    color: white;
+    margin-bottom: -0.5rem;
+  }
 }
 
 .water-control--button {
@@ -114,6 +145,7 @@
   font-size: 2rem;
   padding: 1rem;
   width: min(calc(100% - 2rem), 400px);
+  color: white;
 
   &:active, &:focus {
     // make this fun
