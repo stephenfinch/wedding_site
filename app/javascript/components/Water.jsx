@@ -30,8 +30,8 @@ const Water = () => {
   const WaterStats = () => {
     return (
       <div className='water-stats-container'>
-        <div className='water-stats'>Goal: 100 oz 💧 | Streak: 3 🔥</div>
-        <div className='page-toggle'>History</div>
+        <div className='water-stats'>Goal: {GOAL}oz 💧 | Streak: 3 🔥</div>
+        <a href='/history' className='page-toggle'>History</a>
       </div>
     )
   }
@@ -89,7 +89,7 @@ const Water = () => {
           <input onChange={({ target: { value } }) => setSlider(parseInt(value))} id='water-control--slider' type="range" min="6" max="64" step='2' value={slider} className='water-control--slider' />
           <div className='water-control--display'>
             <img src={imagePath} alt={imagePath} />
-            <span>{slider} oz</span>
+            <span>{slider}oz</span>
           </div>
         </div>
         <div className='water-control--item'>

@@ -1,0 +1,42 @@
+.water-log--container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  max-height: calc(100vh - 3.5rem);
+  overflow: scroll;
+}
+
+.water-log--item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  min-width: 300px;
+  min-height: 50px;
+}
+
+.item-0 {
+  background: #9CDAF1;
+}
+
+.item-1 {
+  background: #D0F3F7;
+}
+
+.water-log--text {
+  color: black;
+  border-right: 2px solid white;
+  padding-right: 2rem;
+  margin-right: 2rem;
+}
+
+.water-log--trash {
+
+}
+
+// .waves-box {
+//   position: relative;
+//   display: flex;
+//   overflow: hidden;
+// }
