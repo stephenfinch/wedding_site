@@ -1,0 +1,12 @@
+// Place all the styles related to the drinks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.drink-record {
+  background: rgba($color: #D0F3F7, $alpha: 1);
+  padding: 1rem 2rem;
+  width: 200px;
+  text-align: center;
+  border-radius: 15px;
+  line-height: 2rem;
+}

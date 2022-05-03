@@ -1,0 +1,19 @@
+.flex.flex-col.justify-between.gap-sm.full-width
+  .flex.justify-evenly
+    .flex.flex-col.items-center.gap-lg
+      h1 Stephen 
+      - @stephen_drinks.each do |drink|
+        .drink-record 
+          | Oz Drank: #{drink.oz}
+            Time: #{drink.created_at.to_s(:time)}
+    .flex.flex-col.items-center.gap-lg
+      h1 Mary 
+      - @mary_drinks.each do |drink|
+        .drink-record
+          | Oz Drank: #{drink.oz}
+            Time: #{drink.created_at.to_s(:time)}
+  
+  = simple_form_for(@drink) do |f|
+    = f.input :owner
+    = f.input :oz, as: :numeric
+    = f.submit class: 'btn btn--primary'
